@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.75)),
+    url("pexels-jean-van-der-meulen-1457842.jpg");
+  background-size: cover;
+  background-color: gray;
+  background-position: center;
+  position: relative;
+}
+
+.container .nav_bar {
+  width: 85%;
+  margin: auto;
+  padding-block: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container .nav_bar .logo {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  flex-basis: 150px;
+  font-family: "Carter One", cursive;
+}
+
+.container .nav_bar .logo:hover {
+  color: #009688;
+}
+
+.container .nav_bar ul li {
+  display: inline-block;
+  list-style: none;
+  margin-inline: 20px;
+  position: relative;
+}
+
+.container .nav_bar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.container .nav_bar ul li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #009688;
+  transition: 0.5s;
+}
+
+.container .nav_bar ul li:hover::after {
+  width: 100%;
+}
+
+.container .nav_bar .icon i {
+  display: none;
+}
+
+.container .content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  text-align: center;
+}
+
+.container .content h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.container .content h1 + p {
+  color: white;
+  margin: 25px;
+  line-height: 1.6;
+}
+
+.container .content .buttons button {
+  width: 200px;
+  padding-block: 15px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 25px;
+  border: 2px solid #009688;
+  color: white;
+  font-size: 17px;
+  background-color: transparent;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .content .buttons button::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #009688;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.container .content .buttons button:hover::after {
+  width: 100%;
+}
+
+.container .content .buttons button:hover {
+  border: none;
+}
+
+/* mobile media */
+@media (max-width: 767px) {
+  .container .nav_bar .icon i {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .container .nav_bar ul {
+    display: none;
+  }
+
+  .container .nav_bar .icon:hover ul {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: calc(100% - 35px);
+    right: 0;
+  }
+
+  .container .nav_bar ul li {
+    display: block;
+    margin-block: 10px;
+    padding-top: 10px;
+  }
+
+  .container .content {
+    top: 70%;
+  }
+
+  .container .content h1 {
+    font-size: 45px;
+  }
+
+  .container .content h1 + p {
+    font-size: 15px;
+  }
+
+  .container .content .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* meduim screens media */
+@media (max-width: 992px) {
+  .container .nav_bar {
+    width: 100%;
+    padding-inline: 20px;
+  }
+}
