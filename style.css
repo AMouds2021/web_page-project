@@ -54,7 +54,7 @@
 .container .nav_bar ul li::after {
   content: "";
   width: 0;
-  height: 3px;
+  height: 2px;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -150,16 +150,19 @@
 
   .container .nav_bar ul li {
     display: block;
-    margin-block: 10px;
-    padding-top: 10px;
+    padding: 5px;
   }
 
+  .container .nav_bar ul li::after {
+    bottom: 0;
+    height: 1px;
+  }
   .container .content {
     top: 70%;
   }
 
   .container .content h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .container .content h1 + p {
